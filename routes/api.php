@@ -7,4 +7,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
-Route::post('/gps-data', [GpsController::class, 'index']);
+
+Route::get('/gps', [GpsController::class, 'index']);
+Route::post('/gps', [GpsController::class, 'create']);
+Route::delete('/gps', [GpsController::class, 'delete']);
