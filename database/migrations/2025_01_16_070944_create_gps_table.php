@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('gps', function (Blueprint $table) {
             $table->id();
             $table->string('device_id')->nullable()->default(null);
-            $table->decimal('latitude', 10, 7)->nullable()->default(null);
-            $table->decimal('longitude', 10, 7)->nullable()->default(null);
+            $table->decimal('latitude')->nullable()->default(null);
+            $table->decimal('longitude')->nullable()->default(null);
             $table->timestamps();
         });
     }
